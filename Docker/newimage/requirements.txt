@@ -1,0 +1,7 @@
+pandas
+scipy
+Pillow
+matplotlib
+tqdm
+cmake
+lapsolver==1.1.0
