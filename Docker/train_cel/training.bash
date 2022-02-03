@@ -16,14 +16,13 @@ cd /multi-center-fed-learning/models
 DATASET="CELEBA"
 python experiment.py -dataset celeba -experiment fedavg
 FILE="$DATASET-fedavg-"
-sync_history FILE
+sync_history "${FILE}"
 
 python experiment.py -dataset celeba -experiment fedsem
 FILE="$DATASET-fedsem-"
-sync_history FILE
+sync_history "${FILE}"
 
 python experiment.py -dataset celeba -experiment fedrobust
 FILE="$DATASET-fedrobust-"
-sync_history FILE
-
-echo "Training Data copied to bucket, job successfully completed. "
+sync_history "${FILE}"
+echo "Result copied to storage, job successfully completed. "

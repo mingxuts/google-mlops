@@ -15,13 +15,13 @@ DATASET="CELEBA"
 echo "****** Experiment to run on Celeba ******"
 python experiment.py -dataset celeba -experiment fedavg -configuration job-poison.yaml
 FILE="$DATASET-fedavg-poison-"
-sync_history FILE
+sync_history "${FILE}"
 
 python experiment.py -dataset celeba -experiment fedsem -configuration job-poison.yaml
 FILE="$DATASET-fedsem-poison-"
-sync_history FILE
+sync_history "${FILE}"
 
 python experiment.py -dataset celeba -experiment fedrobust -configuration job-poison.yaml
 FILE="$DATASET-fedrobust-poison-"
-sync_history FILE
-echo "Training result copied to bucket, job successfully completed. "
+sync_history "${FILE}"
+echo "Result copied to storage, job successfully completed. "

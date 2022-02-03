@@ -16,12 +16,13 @@ DATASET="FEMNIST"
 echo "****** Experiment to run on Femnist ******"
 python experiment.py -dataset femnist -experiment fedavg -configuration job-poison.yaml
 FILE="$DATASET-fedavg-poison-"
-sync_history FILE
+sync_history "${FILE}"
 
 python experiment.py -dataset femnist -experiment fedrobust -configuration job-poison.yaml
 FILE="$DATASET-fedsem-poison-"
-sync_history FILE
+sync_history "${FILE}"
 
 python experiment.py -dataset femnist -experiment fedsem -configuration job-poison.yaml
 FILE="$DATASET-fedrobust-poison-"
-sync_history FILE
+sync_history "${FILE}"
+echo "Result copied to storage, job successfully completed. "
