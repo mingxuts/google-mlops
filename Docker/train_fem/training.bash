@@ -16,13 +16,13 @@ cd /multi-center-fed-learning/models
 DATASET="FEMNIST"
 
 python experiment.py -dataset femnist -experiment fedavg
-FILE = "$DATASET-fedavg-"
+FILE="$DATASET-fedavg-"
 sync_history FILE
 
 python experiment.py -dataset femnist -experiment fedrobust
-FILE = "$DATASET-fedrobust-"
+FILE="$DATASET-fedrobust-"
 sync_history FILE
 
 python experiment.py -dataset femnist -experiment fedsem
-FILE = "$DATASET-fedsem-"
+FILE="$DATASET-fedsem-"
 sync_history FILE
