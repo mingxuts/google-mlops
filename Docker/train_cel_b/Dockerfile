@@ -1,4 +1,4 @@
-FROM gcr.io/robust-multicenter-fl/train_syn_op
+FROM gcr.io/robust-multicenter-fl/data_op
 
 WORKDIR /root
 COPY ./benchmark_s.bash /root
