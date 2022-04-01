@@ -8,7 +8,7 @@ function sync_history() {
     popd
 }
 
-echo "****** Experiment to run on Celeba ******"
+echo "****** Experiment to run on Synthetic ******"
 
 cd /multi-center-fed-learning
 git pull origin rbmcfl
@@ -18,9 +18,6 @@ python experiment.py -dataset synthetic -experiment fedavg
 FILE="$DATASET-fedavg-"
 sync_history "${FILE}"
 
-python experiment.py -dataset synthetic -experiment fedsem
-FILE="$DATASET-fedsem-"
-sync_history "${FILE}"
 
 python experiment.py -dataset synthetic -experiment fedrobust
 FILE="$DATASET-fedrobust-"
