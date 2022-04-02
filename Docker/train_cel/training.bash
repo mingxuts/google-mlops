@@ -18,10 +18,6 @@ python experiment.py -dataset celeba -experiment fedavg
 FILE="$DATASET-fedavg-"
 sync_history "${FILE}"
 
-python experiment.py -dataset celeba -experiment fedsem
-FILE="$DATASET-fedsem-"
-sync_history "${FILE}"
-
 python experiment.py -dataset celeba -experiment fedrobust
 FILE="$DATASET-fedrobust-"
 sync_history "${FILE}"

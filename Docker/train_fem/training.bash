@@ -23,7 +23,4 @@ python experiment.py -dataset femnist -experiment fedrobust
 FILE="$DATASET-fedrobust-"
 sync_history "${FILE}"
 
-python experiment.py -dataset femnist -experiment fedsem
-FILE="$DATASET-fedsem-"
-sync_history "${FILE}"
 echo "Result copied to storage, job successfully completed. "
