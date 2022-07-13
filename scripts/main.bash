@@ -1,6 +1,6 @@
 #! /bin/bash
 
-DATASET="synthetic"
+DATASET="celeba"
 lr="0.01"
 num_rounds="400"
 clients_per_round="5"
@@ -15,10 +15,6 @@ function run_fedco() {
 }
 
 ##################### Script #################################
-cd /root/leaf/data/synthetic
-rm -rf data
-python main.py -num-tasks 1000 -num-classes 5 -num-dim 60
-./preprocess.sh -s niid --sf 1.0 -k 5 -t sample --tf 0.6
 cd /root/multi-center-fed-learning
 git pull origin pfl-test
 cd models
